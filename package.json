@@ -1,0 +1,36 @@
+{
+  "name": "order-id",
+  "version": "1.0.0",
+  "description": "Unique order id generator",
+  "main": "lib",
+  "homepage": "https://github.com/mderazon/order-id",
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/mderazon/order-id.git"
+  },
+  "scripts": {
+    "test": "standard && tape test"
+  },
+  "files": [
+    "lib",
+    "*.js"
+  ],
+  "engines": {
+    "node": ">=6.6.0"
+  },
+  "author": "Michael Derazon <mderazon@hotmail.com>",
+  "license": "MIT",
+  "dependencies": {
+    "node-fpe": "^1.0.0"
+  },
+  "keywords": [
+    "order",
+    "id",
+    "generator",
+    "random"
+  ],
+  "devDependencies": {
+    "standard": "^8.5.0",
+    "tape": "^4.6.3"
+  }
+}
