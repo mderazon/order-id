@@ -16,3 +16,10 @@ test('get time', (t) => {
   const id = orderid.generate()
   t.equal(orderid.getTime(id), now)
 })
+
+test('passing date argument', (t) => {
+  t.plan(1)
+  const now = Date.now()
+  const id = orderid.generate(now)
+  t.equal(orderid.getTime(id), now)
+})
