@@ -1,6 +1,12 @@
 const test = require('tape')
 const orderid = require('../lib')('mysecret')
 
+test('is string', (t) => {
+  t.plan(1)
+  const id = orderid.generate()
+  t.equal(typeof id, 'string')
+})
+
 test('different ids', (t) => {
   t.plan(1)
   const id1 = orderid.generate()
