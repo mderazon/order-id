@@ -9,7 +9,9 @@
     "url": "git://github.com/mderazon/order-id.git"
   },
   "scripts": {
-    "test": "standard && tape test"
+    "test:prettier": "prettier --single-quote --list-different '**/*.js'",
+    "fix:prettier": "prettier --single-quote --write '**/*.js'",
+    "test": "npm run test:prettier && tape test"
   },
   "files": [
     "lib",
@@ -30,7 +32,7 @@
     "random"
   ],
   "devDependencies": {
-    "standard": "^8.5.0",
-    "tape": "^4.6.3"
+    "prettier": "^1.12.1",
+    "tape": "^4.9.0"
   }
 }
