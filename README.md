@@ -4,15 +4,15 @@
 
 > (almost) unique order id generator
 
-* Generates order ids in the format `xxxx-xxxxxx-xxxx`, where `x` is a number (0-9).
+- Generates order ids in the format `xxxx-xxxxxx-xxxx`, where `x` is a number (0-9).
 
-* Uses the current unix timestamp (13 digits) plus 1 random digit so it's **unique down to the milisecond**.
+- Uses the current unix timestamp (13 digits) plus 1 random digit so it's **unique down to the milisecond**.
 
-* If your system generates 1,000,000 orders per day (homogeneously distributed), the probability of collision would be ~1%. The extra padding digit makes it even lower.
+- If your system generates 1,000,000 orders per day (homogeneously distributed), the probability of collision would be ~1%. The extra padding digit makes it even lower.
 
-* The timestamp is scrambled using a supplied key so the result doesn't appear as a timestamp.
+- The timestamp is scrambled using a supplied key so the result doesn't appear as a timestamp.
 
-* Bonus: Since it's based on timestamp, we can get the time back from the order id (see api calls).
+- Bonus: Since it's based on timestamp, we can get the time back from the order id (see api calls).
 
 ### Usage
 
@@ -27,5 +27,5 @@ orderid.getTime(id);
 
 ### Api
 
-* `generate(date)` - generates an order id. `date` is optional and can be anything that js [Date](https://developer.mozilla.org/en/docs/Web/JavaScript/Reference/Global_Objects/Date) constructor knows how to parse and it will use it as the time for the order id. otherwise, current date will be used.
-* `getTime(id)` - bonus feature :-) since it's based on a timestamp, it encodes the time the order was done. use this to get back the time of the order in unix timestamp format (you need to use the same key used to generate the order id).
+- `generate(date)` - generates an order id. `date` is optional and can be anything that js [Date](https://developer.mozilla.org/en/docs/Web/JavaScript/Reference/Global_Objects/Date) constructor knows how to parse and it will use it as the time for the order id. otherwise, current date will be used.
+- `getTime(id)` - bonus feature :-) since it's based on a timestamp, it encodes the time the order was done. use this to get back the time of the order in unix timestamp format (you need to use the same key used to generate the order id).
