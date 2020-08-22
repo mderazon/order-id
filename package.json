@@ -32,7 +32,7 @@
     "random"
   ],
   "devDependencies": {
-    "prettier": "^1.15.2",
-    "tape": "^4.9.1"
+    "prettier": "^2.0.5",
+    "tape": "^5.0.1"
   }
 }
