@@ -18,12 +18,12 @@
     "*.js"
   ],
   "engines": {
-    "node": ">=6.6.0"
+    "node": ">=12.0.0"
   },
   "author": "Michael Derazon <mderazon@hotmail.com>",
   "license": "MIT",
   "dependencies": {
-    "node-fpe": "^1.0.0"
+    "node-fpe": "^2.0.0"
   },
   "keywords": [
     "order",
