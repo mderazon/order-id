@@ -4,7 +4,7 @@
 
 > (almost) unique order id generator
 
-- Generates order ids in the format `xxxx-xxxxxx-xxxx`, where `x` is a digit (0-9).
+- Generates order ids in the format `xxxx-xxxxxx-xxxx`, where `x` is a digit (0-9). Similar to the format Amazon is using for their order numbers.
 - Uses the current unix timestamp (13 digits) plus 1 random digit so it's **unique down to the milisecond**.
 - If your system generates 1,000,000 orders per day (evenly distributed), the probability of collision would be ~1%. The extra padding digit makes it even lower.
 - The timestamp is scrambled using a supplied key so the result doesn't appear as a timestamp and is not sequential.
