@@ -19,7 +19,7 @@
   ],
   "types": "lib/index.d.ts",
   "engines": {
-    "node": ">=12.0.0"
+    "node": ">=10.0.0"
   },
   "author": "Michael Derazon <mderazon@hotmail.com>",
   "license": "MIT",
