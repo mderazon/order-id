@@ -3,9 +3,7 @@
  *
  * @param {string} secret A secret used for the permutation.
  */
-declare function orderId(
-  secret: string
-): {
+declare function orderId(secret: string): {
   /**
    * Generate an order id.
    *
