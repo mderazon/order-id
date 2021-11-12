@@ -1,6 +1,6 @@
 {
   "name": "order-id",
-  "version": "2.1.1",
+  "version": "2.1.2",
   "description": "Unique order id generator",
   "main": "lib",
   "homepage": "https://github.com/mderazon/order-id",
