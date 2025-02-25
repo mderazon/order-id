@@ -24,7 +24,7 @@
   "author": "Michael Derazon <mderazon@hotmail.com>",
   "license": "MIT",
   "dependencies": {
-    "node-fpe": "^2.0.2"
+    "node-fpe": "^2.0.4"
   },
   "keywords": [
     "order",
@@ -33,6 +33,6 @@
     "random"
   ],
   "devDependencies": {
-    "prettier": "^2.4.1"
+    "prettier": "^3.5.2"
   }
 }
