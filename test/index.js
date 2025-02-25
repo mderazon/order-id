@@ -1,31 +1,27 @@
-const test = require('tape');
+const test = require('node:test');
+const assert = require('node:assert/strict');
 const orderid = require('../lib')('mysecret');
 
-test('is string', (t) => {
-  t.plan(1);
+test('is string', () => {
   const id = orderid.generate();
-  t.equal(typeof id, 'string');
+  assert.equal(typeof id, 'string');
 });
 
-test('different ids', (t) => {
-  t.plan(1);
+test('different ids', async () => {
   const id1 = orderid.generate();
-  setTimeout(function () {
-    const id2 = orderid.generate();
-    t.notEqual(id1, id2);
-  }, 1);
+  await new Promise((resolve) => setTimeout(resolve, 1));
+  const id2 = orderid.generate();
+  assert.notEqual(id1, id2);
 });
 
-test('get time', (t) => {
-  t.plan(1);
+test('get time', () => {
   const now = Date.now();
   const id = orderid.generate();
-  t.equal(orderid.getTime(id), now);
+  assert.equal(orderid.getTime(id), now);
 });
 
-test('passing date argument', (t) => {
-  t.plan(1);
+test('passing date argument', () => {
   const now = Date.now();
   const id = orderid.generate(now);
-  t.equal(orderid.getTime(id), now);
+  assert.equal(orderid.getTime(id), now);
 });
